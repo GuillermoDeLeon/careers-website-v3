@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Careers from GD</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <style>
+    #banner {
+      height: 360px;
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  {% include 'nav.html' %}
+  <img class="img-fluid" id="banner" src="https://careers-website.guillermodeleon.repl.co/static/banner-dsg.jpg">
+  <div class="container">
+    <h1 class="text-center">{{company_name}}</h1> 
+    <div class="row" style="margin-bottom: 16px">
+      <div class="col-md-6">
+    <p class="lead">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor orci dapibus ultrices in iaculis nunc. Sagittis purus sit amet volutpat consequat mauris nunc. Cum sociis natoque penatibus et magnis dis parturient montes. Odio ut sem nulla pharetra diam sit. Magna fringilla urna porttitor rhoncus dolor purus non enim. Molestie ac feugiat sed lectus vestibulum 
+    </p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+      <img src="/static/people-working.jpg" style="height:320px; border-radius: 4px;">
+      </div>
+    </div>
+    <p class="lead">
+      Aliquam faucibus purus in massa tempor nec feugiat nisl. Magna fringilla urna porttitor rhoncus dolor purus. Faucibus scelerisque eleifend donec pretium vulputate sapien. Dictum sit amet justo donec enim diam vulputate. Vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Cras ornare arcu dui vivamus arcu felis. Tortor aliquam nulla facilisi cras fermentum. Egestas pretium aenean pharetra magna ac placerat        
+    </p>
+    <p class="lead">
+      Arcu cursus euismod quis viverra nibh cras pulvinar. Amet mauris commodo quis imperdiet massa. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Cras ornare arcu dui vivamus arcu. Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Pretium vulputate sapien nec sagittis .   
+    </p>
+    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    <div>
+      {% for job in jobs %}
+        {% include 'jobitem.html'%}
+      {% endfor %}
+    </div>
+    <div class="text-center">
+    <button class="btn btn-primary btn-lg">Contact Us</button>
+    </div>
+  </div>
+    {% include 'footer.html' %}
+</body>
+</html>
